@@ -9,9 +9,9 @@ public class PlayerMotor : MonoBehaviour
     int state;
     
     private CharacterController controller;
-    private float speed = 12;
+    private float speed = 15;
     private Vector3 moveDirection = Vector3.zero;
-    int gravity = 2;
+    int gravity = 1;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow) && IsGrounded()&& now_touch=="floor")
             {
-                moveDirection.y = 0.7f;
+                moveDirection.y = 0.5f;
                 state = 1;
             }
             else
@@ -41,7 +41,7 @@ public class PlayerMotor : MonoBehaviour
         float axis = Input.GetAxis("Horizontal");
 
         controller.Move(new Vector3(axis * Time.deltaTime * 10, moveDirection.y, 0)+ Vector3.forward * speed * Time.deltaTime);
-        if (transform.position.y < 0)
+        if (transform.position.y < -50)
         {
             blood.instance.Dead();
         }
