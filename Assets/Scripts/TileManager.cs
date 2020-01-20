@@ -8,7 +8,7 @@ public class TileManager : MonoBehaviour
     private Transform playerTransform;
     private float spawnZ = 0.0f;
     private float tileLength = 38.0f;
-    private int amnTilesOnscreen = 7;
+    private int amnTilesOnscreen = 3;
     private int lastPrefabIndex = 0;
     // Start is called before the first frame update
     void Start()

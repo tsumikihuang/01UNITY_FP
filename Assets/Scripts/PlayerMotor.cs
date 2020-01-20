@@ -27,14 +27,14 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow) && IsGrounded()&& now_touch=="floor")
-            {
-                moveDirection.y = 0.5f;
-                state = 1;
-            }
-            else
-            {
-                state = 0;
-            }
+        {
+            moveDirection.y = 0.5f;
+            state = 1;
+        }
+        else
+        {
+            state = 0;
+        }
         moveDirection.y -= gravity * Time.deltaTime;
 
         anim.SetInteger("state", state);

@@ -18,7 +18,7 @@ public class boom : MonoBehaviour
             countdown.SetActive(false);
             countdown.SetActive(true);
             ray.SetActive(true);
-            if (time > 11)
+            if (time > 11f)
             {
                 ray.SetActive(false);
                     time = 0;
